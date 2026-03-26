@@ -1,0 +1,13 @@
+services:
+- type: web
+  name: realtime-chat
+  runtime: node
+  buildCommand: npm install
+  startCommand: npm start
+  envVars:
+    - key: NODE_VERSION
+      value: 20
+    - key: NODE_ENV
+      value: production
+  autoDeploy: true
+  healthCheckPath: /health
